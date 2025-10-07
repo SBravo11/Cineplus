@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/bottom_inicio"
+        android:id="@+id/inicio"
+        android:icon="@drawable/baseline_home_24"/>
+    <item android:title="@string/bottom_cines"
+        android:id="@+id/cines"
+        android:icon="@drawable/baseline_home_24"/>
+    <item android:title="@string/bottom_dulceria"
+        android:id="@+id/dulceria"
+        android:icon="@drawable/baseline_home_24"/>
+    <item android:title="@string/bottom_cuenta"
+        android:id="@+id/cuenta"
+        android:icon="@drawable/baseline_home_24"/>
+</menu>

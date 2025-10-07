@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">CinePlus</string>
+
+    <!--Main : Inicio-->
+    <string name="titulo_main">Destacadas</string>
+
+    <!-- Nav Bottom Bar -->
+    <string name="bottom_inicio">Inicio</string>
+    <string name="bottom_cines">Cines</string>
+    <string name="bottom_dulceria">Dulcería</string>
+    <string name="bottom_cuenta">Cuenta</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
