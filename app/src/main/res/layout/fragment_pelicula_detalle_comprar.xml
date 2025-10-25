@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pelicula_detalle_comprar">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtTituloPelicula"
+        app:layout_constraintStart_toEndOf="@id/btn_volver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/scale_16"
+        android:text="@string/titulo_pelicula_placeholder"
+        android:textSize="@dimen/text_title_header"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/btn_volver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/descripcion_btn_volver"
+        android:padding="15dp"
+        android:layout_marginStart="@dimen/scale_16"
+        android:layout_marginTop="@dimen/scale_16"
+        android:src="@drawable/arrow_left"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/txtTituloPelicula"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="none" />
+
+    <ImageView
+        android:id="@+id/img_pelicula"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/descripcion_fondo_pelicula"
+        android:src="@drawable/ic_launcher_background"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="77dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="@dimen/scale_16"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloPelicula"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_detalle_pelicula"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/scale_16"
+        android:text="@string/btn_detalle_pelicula"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_pelicula"
+        app:layout_constraintWidth_percent="0.5"
+        app:cornerRadius="0dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_detalle_comprar_pelicula"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/scale_16"
+        android:text="@string/btn_detalle_comprar_pelicula"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_pelicula"
+        app:layout_constraintWidth_percent="0.5"
+        app:cornerRadius="0dp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_subtitulo_pelicula_detalle_seleccionar"
+        android:text="@string/txt_subtitulo_pelicula_detalle_seleccionar"
+        app:layout_constraintTop_toBottomOf="@id/btn_detalle_pelicula"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/scale_16"
+        android:layout_marginTop="120dp"
+        android:textSize="@dimen/text_subtitle"
+        android:textStyle="bold"
+        />
+
+    <Spinner
+        android:id="@+id/lista_cines_pelicula"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txt_subtitulo_pelicula_detalle_seleccionar"
+        tools:layout_editor_absoluteX="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/scale_16"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_subtitulo_horarios_disponbibles_pelicula"
+        android:text="@string/txt_subtitulo_pelicula_horarios"
+        app:layout_constraintTop_toBottomOf="@id/lista_cines_pelicula"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/scale_16"
+        android:layout_margin="@dimen/scale_16"
+        android:textSize="@dimen/text_subtitle"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="267dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/scale_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_subtitulo_horarios_disponbibles_pelicula"
+        tools:layout_editor_absoluteX="1dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_horario_1_pelicula_comprar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_16"
+            android:layout_marginEnd="24dp"
+            android:text="@string/txt_horario_1_placeholder_pelicula_comprar" />
+
+        <Button
+            android:id="@+id/btn_horario_2_pelicula_comprar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_horario_2_placeholder_pelicula_comprar" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

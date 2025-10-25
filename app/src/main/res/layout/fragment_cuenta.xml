@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cuenta">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtTituloCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/scale_16"
+        android:text="@string/titulo_cuenta_placeholder"
+        android:textSize="@dimen/text_title_header"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_datos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/scale_16"
+        android:text="@string/btn_datos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloCuenta"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_compras"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/scale_16"
+        android:text="@string/btn_compras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloCuenta"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtDatosCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/scale_16"
+        android:textSize="@dimen/text_subtitle"
+        android:text="@string/subtitle_contacto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_datos" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_telefono"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/scale_16"
+        app:layout_constraintTop_toBottomOf="@id/txtDatosCuenta">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_telefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_telefono"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/sp_departamento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/scale_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_telefono"
+        android:layout_marginStart="@dimen/scale_16"
+        android:layout_marginEnd="@dimen/scale_16"
+        android:prompt="@string/hint_departamento"
+        />
+
+    <Spinner
+        android:id="@+id/sp_provincia"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/scale_16"
+        android:layout_marginStart="@dimen/scale_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_departamento"
+        app:layout_constraintWidth_percent="0.45"
+        android:prompt="@string/hint_provincia"
+        />
+    <Spinner
+        android:id="@+id/sp_distrito"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/scale_16"
+        android:layout_marginEnd="@dimen/scale_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_departamento"
+        app:layout_constraintWidth_percent="0.45"
+        android:prompt="@string/hint_distrito"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_direccion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/scale_16"
+        app:layout_constraintTop_toBottomOf="@id/sp_provincia">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_direccion" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/sp_estado_civil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/scale_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_direccion"
+        android:layout_marginStart="@dimen/scale_16"
+        android:layout_marginEnd="@dimen/scale_16"
+        android:prompt="@id/sp_estado_civil"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_correo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/scale_16"
+        app:layout_constraintTop_toBottomOf="@id/sp_estado_civil">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_correo" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_guardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_correo"
+        android:layout_margin="@dimen/scale_16"
+        android:text="@string/btn_guardar" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

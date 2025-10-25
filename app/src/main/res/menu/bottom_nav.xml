@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/bottom_inicio"
+        android:id="@+id/bottom_inicio"
+        android:icon="@drawable/home"/>
+    <item android:title="@string/bottom_cines"
+        android:id="@+id/bottom_cines"
+        android:icon="@drawable/map_marker"/>
+    <item android:title="@string/bottom_dulceria"
+        android:id="@+id/bottom_dulceria"
+        android:icon="@drawable/popcorn"/>
+    <item android:title="@string/bottom_cuenta"
+        android:id="@+id/bottom_cuenta"
+        android:icon="@drawable/account"/>
+</menu>

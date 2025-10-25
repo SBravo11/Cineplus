@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--SCALES-->
+    <dimen name="scale_8">8dp</dimen>
+    <dimen name="scale_12">12dp</dimen>
+    <dimen name="scale_16">16dp</dimen>
+
+    <!--TEXTO-->
+    <dimen name="text_title_header">24sp</dimen>
+    <dimen name="text_subtitle">20sp</dimen>
+</resources>

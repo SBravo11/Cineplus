@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cuenta">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtTituloCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/scale_16"
+        android:text="@string/titulo_cuenta_placeholder"
+        android:textSize="@dimen/text_title_header"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_datos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/scale_16"
+        android:text="@string/btn_datos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloCuenta"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_compras"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/scale_16"
+        android:text="@string/btn_compras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloCuenta"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <ImageButton
+        android:id="@+id/btn_entradas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:padding="@dimen/scale_16"
+        android:layout_marginEnd="@dimen/scale_16"
+        android:layout_marginStart="@dimen/scale_16"
+        app:layout_constraintTop_toBottomOf="@id/btn_datos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_launcher_background"
+        android:contentDescription="@string/btn_entradas"
+        app:cornerRadius="30dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_dulces"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:text="@string/btn_dulces"
+        app:cornerRadius="30dp"
+        android:layout_marginTop="36dp"
+        android:padding="@dimen/scale_16"
+        android:layout_marginEnd="@dimen/scale_16"
+        android:layout_marginStart="@dimen/scale_16"
+        app:layout_constraintTop_toBottomOf="@id/btn_entradas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,63 @@
 <resources>
     <string name="app_name">Cineplus</string>
+
+    <!-- Main : Inicio-->
+    <string name="titulo_main">Destacadas</string>
+    <string name="main_proximamente">Próximamente</string>
+    <string name="main_vistos">Vistos</string>
+
+    <!-- Pelicula - Detalle-->
+    <string name="titulo_pelicula_placeholder">Titulo Pelicula</string>
+    <string name="descripcion_btn_volver">Volver</string>
+    <string name="descripcion_fondo_pelicula">Portada de la pelicula - Fondo</string>
+    <string name="btn_detalle_comprar_pelicula">Comprar</string>
+    <string name="btn_detalle_pelicula">Detalle</string>
+    <string name="subtitulo_sinopsis_pelicula">Sinopsis</string>
+    <string name="txt_sinopsis_pelicula">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</string>
+    <string name="txt_subtitulo_idioma_pelicula">Idioma</string>
+    <string name="txt_idioma_disponible">Doblada</string>
+    <string name="txt_calidad_subtitulo_pelicula">Disponible</string>
+    <string name="txt_tipos_pelicula_2d">2D</string>
+    <string name="txt_tipos_pelicula_regular">Regular</string>
+
+    <!-- Pelicula - Detalle - Comprar -->
+    <string name="txt_subtitulo_pelicula_detalle_seleccionar">Seleccione el Cine</string>
+    <string name="txt_subtitulo_pelicula_horarios">Horarios Disponibles</string>
+    <string name="txt_horario_1_placeholder_pelicula_comprar">4:00 pm</string>
+    <string name="txt_horario_2_placeholder_pelicula_comprar">7:00 pm</string>
+
+
+    <!-- Main : Card-->
+    <string name="card_title">Title placeholder</string>
+    <string name="card_resumen">Texto resumen placeholder Texto resumen placeholder Texto resumen placeholder Texto resumen placeholder</string>
+    <string name="card_hora">12:00 pm</string>
+    <string name="card_placeholder_text">Portada</string>
+
+    <!-- Main: Cuenta - Datos -->
+    <string name="titulo_cuenta_placeholder">Nombre del Usuario</string>
+    <string name="subtitle_contacto">Datos de Contacto</string>
+    <string name="hint_telefono">Teléfono</string>
+    <string name="hint_departamento">Departamento</string>
+    <string name="hint_provincia">Provincia</string>
+    <string name="hint_distrito">Distrito</string>
+    <string name="hint_direccion">Dirección</string>
+    <string name="hint_estado_civil">Estado Civil</string>
+    <string name="hint_correo">Correo Electrónico</string>
+    <string name="btn_guardar">Guardar Datos</string>
+    <string name="btn_datos">Mis datos</string>
+    <string name="btn_compras">Mis compras</string>
+
+    <!-- Main: Cuenta - Compras -->
+    <string name="btn_entradas">Entradas</string>
+    <string name="btn_dulces">Dulces</string>
+
+    <!-- Bottom Navigation Bar -->
+    <string name="bottom_inicio">Inicio</string>
+    <string name="bottom_cines">Cines</string>
+    <string name="bottom_dulceria">Dulcería</string>
+    <string name="bottom_cuenta">Cuenta</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
