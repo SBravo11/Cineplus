@@ -30,7 +30,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/txtTituloPelicula"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="none" />
+        android:background="@android:color/transparent"/>
 
     <ImageView
         android:id="@+id/img_pelicula"
@@ -113,6 +113,8 @@
         android:text="@string/txt_idioma_disponible"
         android:layout_margin="@dimen/scale_16"
         android:textSize="16sp"
+        android:padding="6dp"
+        android:background="@drawable/textview_border"
 
         />
 
@@ -140,6 +142,8 @@
         android:layout_margin="@dimen/scale_16"
         android:layout_marginEnd="20dp"
         android:textSize="16sp"
+        android:padding="6dp"
+        android:background="@drawable/textview_border"
         />
 
     <com.google.android.material.textview.MaterialTextView
@@ -153,6 +157,8 @@
         android:paddingEnd="@dimen/scale_16"
         android:text="@string/txt_tipos_pelicula_regular"
         android:textSize="16sp"
+        android:padding="6dp"
+        android:background="@drawable/textview_border"
         app:layout_constraintStart_toEndOf="@id/txt_tipos_pelicula_1"
         app:layout_constraintTop_toBottomOf="@id/txt_calidad_subtitulo_pelicula" />
 
