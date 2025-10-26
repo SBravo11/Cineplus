@@ -1,12 +1,11 @@
 package com.cibertec.cineplus
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.cibertec.cineplus.databinding.ActivityMainBinding
+import io.github.jan.supabase.createSupabaseClient
+import io.github.jan.supabase.postgrest.Postgrest
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,6 +16,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         cambiarFragmento(Inicio())
+
+        val supabase = createSupabaseClient(
+            supabaseUrl = "https://xyzcompany.supabase.co",
+            supabaseKey = "your_public_anon_key"  )
+        {
+            this.install(Postgrest)
+        }
 
         binding.bottomNavigationView.setOnItemSelectedListener{
             when(it.itemId){
@@ -33,7 +39,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun cambiarFragmento(fragment: Fragment){
-
         val fm = supportFragmentManager
         val fragmentTransaction = fm.beginTransaction()
         fragmentTransaction.replace(R.id.frameLayoutInicio, fragment)

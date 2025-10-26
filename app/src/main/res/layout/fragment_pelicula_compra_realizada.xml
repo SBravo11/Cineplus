@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pelicula_butaca_entrada">
+    tools:context=".pelicula_compra_realizada">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/txt_titulo_pelicula_entradas"
@@ -44,15 +44,6 @@
         android:textSize="@dimen/text_subtitle"
         android:textStyle="bold"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_ver_detalle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_ver_detalle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_titulo_pelicula_butacas"
-        app:layout_constraintTop_toBottomOf="@+id/btn_volver" />
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
@@ -60,8 +51,8 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_ver_detalle"
-        app:layout_constraintBottom_toTopOf="@id/txt_subtitulo_pelicula_entradas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_titulo_pelicula_butacas"
+        app:layout_constraintBottom_toTopOf="@id/txt_titulo_pelicula_compra"
         android:padding="@dimen/scale_16">
 
         <ImageView
@@ -78,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/ticket_confirmation"
-            android:alpha="1"/>
+            android:alpha="0.5"/>
 
         <ImageView
             android:id="@+id/imageView3"
@@ -86,43 +77,52 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/wallet"
-            android:alpha="0.5"/>
+            android:alpha="1"/>
     </LinearLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_continuar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_continuar"
-        app:cornerRadius="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txt_subtitulo_pelicula_entradas"
+        android:id="@+id/txt_titulo_pelicula_compra"
         android:layout_width="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="@dimen/scale_16"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/text_subtitle"
+        android:layout_margin="@dimen/scale_16"
+        android:text="@string/titulo_pelicula_placeholder"
+        android:textSize="@dimen/text_title_header"
         android:textStyle="bold"
-        android:text="@string/txt_subtitulo_pelicula_entradas"
-        tools:layout_editor_absoluteX="219dp"
-        tools:layout_editor_absoluteY="336dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/compra_realizada_movie_info"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:layout_editor_absoluteX="173dp"
-        tools:layout_editor_absoluteY="185dp"
-        android:layout_marginTop="@dimen/scale_16"
-        app:layout_constraintTop_toBottomOf="@id/txt_subtitulo_pelicula_entradas"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/compra_realizada_entrada"
+        app:layout_constraintTop_toBottomOf="@+id/txt_titulo_pelicula_compra"
+        android:layout_margin="@dimen/scale_16"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/compra_realizada_entrada"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_retornar_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/compra_realizada_movie_info"
+        android:layout_margin="@dimen/scale_16"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_retornar_menu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_retornar_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/btn_continuar"/>
+        app:cornerRadius="0dp"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

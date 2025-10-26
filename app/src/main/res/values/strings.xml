@@ -31,6 +31,14 @@
     <string name="btn_continuar">Continuar</string>
     <string name="txt_titulo_pelicula_entradas">Entradas</string>
     <string name="txt_subtitulo_pelicula_entradas">Entradas Generales</string>
+    <string name="txt_resumen_pelicula_compra">Resumen de Compra</string>
+    <string name="txt_subtitulo_pelicula_confirmar">Cine: %1$s</string>
+    <string name="txt_pelicula_resumen_tipo_entrada">Tipo de entrada: %1$s  Precio: %2$d</string>
+    <string name="txt_pelicula_resumen_subtotal">Subtotal:  %1$d</string>
+    <string name="txt_pelicula_resumen_total">Total:    %1$d</string>
+    <string name="btn_confirmar_compra_pelicula">Confirmar</string>
+    <string name="btn_cancelar_compra_pelicula">Cancelar</string>
+    <string name="btn_retornar_menu">Volver a inicio</string>
 
 
     <!-- Main : Card-->

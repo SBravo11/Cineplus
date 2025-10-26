@@ -25,7 +25,8 @@
         android:text="@string/btn_datos"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTituloCuenta"
-        app:layout_constraintWidth_percent="0.5" />
+        app:layout_constraintWidth_percent="0.5"
+        app:cornerRadius="0dp"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_compras"
@@ -35,7 +36,9 @@
         android:text="@string/btn_compras"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTituloCuenta"
-        app:layout_constraintWidth_percent="0.5" />
+        app:layout_constraintWidth_percent="0.5"
+        app:cornerRadius="0dp"
+        />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/txtDatosCuenta"
