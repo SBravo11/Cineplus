@@ -7,7 +7,7 @@
     tools:context=".pelicula_butaca">
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txt_titulo_butacas"
+        android:id="@+id/txt_titulo_pelicula_butacas_main"
         app:layout_constraintStart_toEndOf="@id/btn_volver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
         android:layout_marginTop="@dimen/scale_16"
         android:src="@drawable/arrow_left"
         android:text=""
-        app:layout_constraintBottom_toBottomOf="@+id/txt_titulo_butacas"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_titulo_pelicula_butacas_main"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@android:color/transparent"/>
@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/titulo_pelicula_placeholder"
-        app:layout_constraintTop_toBottomOf="@id/txt_titulo_butacas"
+        app:layout_constraintTop_toBottomOf="@id/txt_titulo_pelicula_butacas_main"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="@dimen/scale_16"
         android:textSize="@dimen/text_subtitle"

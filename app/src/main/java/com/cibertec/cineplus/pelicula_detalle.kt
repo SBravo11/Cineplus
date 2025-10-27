@@ -1,59 +1,65 @@
 package com.cibertec.cineplus
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
+import com.cibertec.cineplus.databinding.FragmentPeliculaDetalleBinding
+import com.cibertec.cineplus.supabaseClient.LocalMoviesData // Importa tu fuente de datos
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class PeliculaDetalle : Fragment() {
 
-/**
- * A simple [Fragment] subclass.
- * Use the [pelicula_detalle.newInstance] factory method to
- * create an instance of this fragment.
- */
-class pelicula_detalle : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentPeliculaDetalleBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pelicula_detalle, container, false)
+    ): View {
+        _binding = FragmentPeliculaDetalleBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment pelicula_detalle.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            pelicula_detalle().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // 1. Recibe el ID de la película del bundle
+        val peliculaId = arguments?.getInt("pelicula_id", -1) ?: -1
+
+        if (peliculaId != -1) {
+            // 2. Busca la película completa usando el ID
+            val pelicula = LocalMoviesData.getPeliculasDestacadas().find { it.id == peliculaId }
+
+            if (pelicula != null) {
+                // 3. Rellena las vistas (igual que antes)
+                binding.txtTituloPelicula.text = pelicula.titulo
+                binding.txtSinopsisPelicula.text = pelicula.sinopsis
+                binding.txtIdiomaDisponiblePelicula.text = pelicula.idioma
+                binding.txtTiposPelicula1.text = pelicula.formato
+
+                Glide.with(this)
+                    .load(pelicula.portada)
+                    .into(binding.imgPelicula)
             }
+        }
+
+        // Configura el botón de volver
+        binding.btnVolver.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
+
+        binding.btnDetalleComprarPelicula.setOnClickListener {
+            if (activity is MainActivity && peliculaId != -1) {
+                // Llama a la nueva función en MainActivity
+                (activity as MainActivity).irAPeliculaDetalleComprar(peliculaId)
+            }
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
